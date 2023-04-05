@@ -7,6 +7,8 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
     },
+    mode: 'development',
+    watch: false,
     resolve:{
         extensions:['.js','.jsx'],
     },
@@ -34,5 +36,12 @@ module.exports = {
             template: './public/index.html',
             filename: './index.html'
         }),
-    ]
+    ],
+    devServer:{
+        static: path.join(__dirname, 'dist'),
+        compress: true,
+        historyApiFallback: true,
+        port: 3006,
+        open: true
+    }
 }

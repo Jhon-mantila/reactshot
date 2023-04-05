@@ -2,7 +2,7 @@ import React from 'react';
 //rafce
 const App = () => {
   return (
-    <h1>App</h1>
+    <h1>App, Bienvenido al Curso Practico de React!!!</h1>
   );
 }
 
