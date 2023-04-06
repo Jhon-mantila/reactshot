@@ -1,10 +1,17 @@
 import React from 'react';
-import '../styles/global.scss';
+import '../styles/global.css';
+import Layout from '../containers/Layout';
+import Login from '../containers/Login';
+
 //rafce
+
 const App = () => {
   return (
-    <h1>App, Bienvenido al Curso Practico de React!!!</h1>
-  );
+    <Layout> 
+      <Login/>
+    </Layout>
+  );//Layout permite componentes hijos
+  //Login no tiene componentes hijos
 }
 
 export default App;

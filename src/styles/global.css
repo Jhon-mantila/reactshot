@@ -1,0 +1,7 @@
+/*Importo fonts de google: Quicksand 300-500-700*/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap');
+/*Inicializo las varianles en css*/
+body{
+    font-family: 'Quicksand', sans-serif;
+    margin: 0px;
+}
