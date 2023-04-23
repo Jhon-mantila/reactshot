@@ -1,0 +1,38 @@
+@import 'vars';
+
+.product-detail{
+    width: 360px;
+    padding-bottom: 20px;
+    position: absolute;
+    right: 0;
+}
+.product-detail-close{
+    width: 20px;
+    height: 20px;
+    background-color: var(--white);
+    border-radius: 50%;
+    position: absolute;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 11px;
+    left: 10px;
+}
+
+.product-detail-close:hover{
+    cursor: pointer;
+}
+
+.product-detail > img:nth-child(2){
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 0 0 20px 20px;
+}
+
+@media(max-width:640px){
+    .product-detail{
+        width: 100%;
+    }
+}
