@@ -14,6 +14,15 @@ module.exports = {
     watch: false,
     resolve:{
         extensions:['.js','.jsx'],
+        alias:{
+            '@component': path.resolve(__dirname, 'src/components/'),
+            '@container': path.resolve(__dirname, 'src/containers/'),
+            '@pages': path.resolve(__dirname, 'src/pages/'),
+            '@routes': path.resolve(__dirname, 'src/routes/'),
+            '@styles': path.resolve(__dirname, 'src/styles/'),
+            '@icons': path.resolve(__dirname, 'src/assets/icons/'),
+            '@logos': path.resolve(__dirname, 'src/assets/logos/'),
+        }
     },
     module:{
         rules:[
@@ -24,7 +33,7 @@ module.exports = {
                     loader:'babel-loader'
                 }
             },
-            {
+            {   // regla para incorporar html
                 test: /\.html$/,
                 use:[
                     {
@@ -32,13 +41,17 @@ module.exports = {
                     }
                 ]
             },
-            {
+            {   //regla plara incorporar  hojas de estilos
                 test: /\.(css|scss)$/,
                 use:[
                     "style-loader",
                     "css-loader",
                     "sass-loader"
                 ]
+            },
+            {   //regla para incorporar imagenes
+                test: /\.(png|svg|jpg|gif)$/,
+                type: 'asset'
             }
         ]
     },
