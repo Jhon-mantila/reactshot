@@ -1,5 +1,7 @@
 import React from 'react';
-import '../styles/ProductItem.scss';
+import '@styles/ProductItem.scss';
+
+import bt_add_cart from '@icons/bt_add_to_cart.svg';
 
 const ProductItem = () => {
   return (
@@ -11,11 +13,11 @@ const ProductItem = () => {
                       <p>Computer</p>
                   </div>
                   <figure>
-                      <img src="./icons/bt_add_to_cart.svg" alt=""/>
+                      <img src={bt_add_cart} alt=""/>
                   </figure>
               </div>
       </div>
   )
 }
 
-export default ProductItem
+export default ProductItem;
