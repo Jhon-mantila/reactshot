@@ -1,38 +1,20 @@
-import React, { useEffect,useState } from 'react';
+import React from 'react';
 import ProductItem from '@components/ProductItem';
+import useGetProducts from '../hooks/useGetProducts';
 import '@styles/ProductList.scss';
-import axios from 'axios';
+
 
 const API = 'https://api.escuelajs.co/api/v1/products';
 
 const ProductList = () => {
   
-  const [products, setProduct] = useState([]);
+  const products = useGetProducts(API);
 
-  useEffect(() =>{
-    //const response = await axios(API);
-    //getData();
-    getDatafetch();
-    
-  },[]);
-
-  //se puede consumir la api ya sea con fetch o axios recomiendan mejor con fetch
-  const getDatafetch = async() =>{
-    const response = await fetch(API);
-    const data = await response.json();
-    console.log(data);
-    setProduct(data);
-  }
-
-  const getData = async()=>{
-    const response = await axios.get(API);
-    setProduct(response.data);
-  }
   return (
       <section className="main-container">
           <div className="cards-container">
             {products.map(product =>(
-              <ProductItem />
+              <ProductItem product={product} key={product.id} />
             ))}
           </div>
       </section>
