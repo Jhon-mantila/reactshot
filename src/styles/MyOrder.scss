@@ -2,10 +2,16 @@
 
 .product-detail{
     width: 360px;
+    height: 100vh;
     padding: 20px;
     position: absolute;
     right: 0;
     box-sizing: border-box;
+    background-color: white;
+    top: 60px;
+    bottom: 0;
+    border-radius: 6px;
+    border: 1px solid var(--very-light-pink);
     
 }
 .title-container{
