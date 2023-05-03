@@ -7,8 +7,8 @@ module.exports = {
     entry: './src/index.js', //punto de entrada de la aplicación
     output:{
         path: path.resolve(__dirname, 'dist'),
-        filename: 'reactshot/bundle.js',
-        publicPath: '/reactshot/'
+        filename: '/bundle.js',
+        publicPath: '/'
     },
     mode: 'development',
     watch: false,
